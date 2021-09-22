@@ -1,0 +1,17 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    padding: 1rem;
+}
+
+h1 {
+    margin: auto;
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: darkgreen;
+    color: white;
+}

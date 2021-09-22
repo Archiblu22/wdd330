@@ -3,6 +3,7 @@
 
 <head>
     <title>Story Writer</title>
+    <link rel="stylesheet" href="/main.css">
     <script>
         function loadStory() {
             var storyName = document.getElementById('name_input').value
@@ -31,16 +32,20 @@
 
 <body>
     <h1>Story Writer</h1>
-    Story Name:<input id=name_input></input>
-    <section>
-        <button onclick="loadStory()">Find and Edit It</button>
-        <button onclick="saveStory()">Save It</button>
-        <button onclick="displayStory()">Display It</button>
-    </section>
-    <textarea id="story_editor" placeholder="Write a totally awesome story
+    <main>
+        Story Name:<input id=name_input></input>
+        <section>
+            <button onclick="loadStory()">Find and Edit It</button>
+            <button onclick="saveStory()">Save It</button>
+            <button onclick="displayStory()">Display It</button>
+        </section>
+        <textarea id="story_editor" placeholder="Write a totally awesome story
 here."></textarea>
-    <section id="story_display"></section>
+        <section id="story_display"></section>
 
-    <a href="/week01/index.html"><< Back</a>
+        <a href="/week01/index.html">
+            << Back</a>
+    </main>
 </body>
+
 </html>
