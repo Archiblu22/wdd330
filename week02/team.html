@@ -19,20 +19,28 @@
 
     <main>
         <h2>Core Requirement 1</h2>
-        <input type="text" id="textInput"></input>
-        <button type="submit" onclick="displayDiv();">Submit</button>
-        <div id="content"></div>
+        <input type="text" id="input"></input>
+        <button onclick="displayDiv();">Submit</button>
+        <div id="output"></div>
 
         <h2>Core Requirement 2</h2>
-        <input type="text" id="textInput2"></input>
-        <button type="submit" onclick="displayDiv2();">Submit</button>
-        <div id="content2"></div>
+        <input type="number" id="input2"></input>
+        <button onclick="displayDiv2();">Submit</button>
+        <div id="output2"></div>
 
         <h2>Core Requirement 3</h2>
-        <input type="text" id="textInput3"> + </input>
-        <input type="text" id="textInput4"></input>
-        <button type="submit" onclick="displayDiv3();">Add</button>
-        <div id="content3"></div>
+        <input type="number" id="input3"> + </input>
+        <input type="number" id="input4"></input>
+        <button onclick="displayDiv3();">Add</button>
+        <div id="output3"></div>
+
+        <h2>Stretch</h2>
+        <input type="number" id="input5">
+        <input type="number" id="input6">
+        <button id="addbutton" onclick="operate(add);">Add</button>
+        <button id="subbutton" onclick="operate(sub);">Sub</button>
+        <button id="multbutton" onclick="operate(mult);">Multiply</button>
+        <div id="output4"></div>
 
         <a href="./index.html">
             << Back</a>
@@ -41,39 +49,57 @@
     <script>
         // Core Requirment 1
         function displayDiv() {
-            document.getElementById("content").innerHTML = document.getElementById("textInput").value;
+            let content = document.querySelector("#input").value;
+            document.getElementById("output").innerHTML = content;
         }
 
         // Core Requirment 2
         function displayDiv2() {
-            const input = document.getElementById('textInput2').value;
-            const inputInt = parseInt(input);
-            const output = document.getElementById('content2');
-
-            if (inputInt !== NaN) {
-                output.innerHTML = sum(inputInt);
+            let content = parseInt(document.querySelector("#input2").value);
+            let sum = content * (content + 1) / 2;
+            if (content !== NaN) {
+                document.getElementById("output2").innerHTML = sum;
             }
-        }
-        function sum(number) {
-            let total = 0;
-            for (let i = 1; i <= number; i++) {
-                total += i;
-            }
-            return total;
         }
 
         // Core Requirement 3
         function displayDiv3() {
-            const input1 = document.getElementById('textInput3').value;
-            const input2 = document.getElementById('textInput4').value;
-            const inputInt1 = parseInt(input1);
-            const inputInt2 = parseInt(input2);
-            const output = document.getElementById('content3');
-
-            if ((inputInt1 !== NaN) & (inputInt2 !== NaN)) {
-                const total = inputInt1 + inputInt2;
-                output.innerHTML = total;
+            let content1 = parseInt(document.querySelector("#input3").value);
+            let content2 = parseInt(document.querySelector("#input4").value);
+            if ((content1 !== NaN) & (content2 !== NaN)) {
+                let add = content1 + content2;
+                document.getElementById("output3").innerHTML = add;
             }
+        }
+
+        // Stretch
+        function getNum(numId) {
+            const number = document.getElementById(numId).value;
+            const numberFloat = parseFloat(number);
+            if (numberFloat !== NaN) {
+                return numberFloat;
+            } else return 0;
+        }
+
+        function updateTotal(value) {
+            const outputElement = document.getElementById("output4");
+            outputElement.innerHTML = value;
+        }
+
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        const sub = function (num1, num2) {
+            return num1 - num2;
+        };
+        const mult = (num1, num2) => num1 * num2;
+
+        function operate(operation) {
+            const total = operation(
+                getNum('input5'),
+                getNum('input6')
+            );
+            updateTotal(total);
         }
     </script>
 </body>
