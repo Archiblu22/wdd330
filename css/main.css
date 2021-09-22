@@ -5,13 +5,24 @@ body {
 }
 
 main {
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 h1 {
     margin: auto;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     text-align: center;
-    background-color: darkgreen;
+    background-color: steelblue;
+    color: white;
+    text-transform: uppercase;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a, p, h2, h3, li {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+a#home {
+    text-decoration: none;
     color: white;
 }
