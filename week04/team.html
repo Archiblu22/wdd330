@@ -8,22 +8,41 @@
     <title>Team Activity</title>
     <link rel="stylesheet" href="../css/main.css">
     <style>
-        table {
+        #table {
             width: 650px;
             height: 650px;
             margin-left: auto;
             margin-right: auto;
         }
-        td {
-            border-style: solid;
-            border-width: 4px;
+
+        td,
+        tr {
+            width: 33.3%;
+            height: 33.3%;
         }
+
+        td {
+            border-right: 3px solid;
+            border-bottom: 3px solid;
+            font-size: 5em;
+            text-align: center;
+        }
+
+        td:last-child {
+            border-right: 0;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
         .btn {
             display: flex;
-            margin: 1rem 0;
+            margin: 2rem 0;
             justify-content: center;
         }
-        .reset {
+
+        #reset {
             border: transparent;
             border-radius: 7px;
             padding: .75rem 2rem;
@@ -38,7 +57,7 @@
     <h1>Team Activity: Tic Tac Toe</h1>
     <main>
 
-        <table>
+        <table id="table">
             <tr>
                 <td></td>
                 <td></td>
@@ -57,11 +76,29 @@
         </table>
 
         <div class="btn">
-            <button class="reset">Reset</button>
+            <button id="reset">Reset</button>
         </div>
 
         <script>
-
+            const table = document.getElementById('table');
+            const player1 = 'X';
+            const player2 = 'O';
+            let player = player1;
+            function select(p) {
+                p.target.innerHTML = player;
+                if (player === player1) player = player2;
+                else player = player1;
+            }
+            function resetTable() {
+                for (let i = 0; i < table.rows.length; i++) {
+                    let row = table.rows[i];
+                    for (let j = 0; j < row.cells.length; j++) {
+                        row.cells[j].innerHTML = '';
+                    }
+                }
+            }
+            table.addEventListener('click', select);
+            reset.addEventListener('click', resetTable);
         </script>
 
         <a href="./index.html">
