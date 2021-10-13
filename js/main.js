@@ -1,5 +1,5 @@
-const linkList = ["week01/index.html", "week02/index.html", "week03/index.html", "week04/index.html"];
-const titleList = ["Week01", "Week02", "Week03", "Week04"];
+const linkList = ["week01/index.html", "week02/index.html", "week03/index.html", "week04/index.html", "week05/index.html"];
+const titleList = ["Week01", "Week02", "Week03", "Week04", "Week05"];
 
 let weekLinks = document.querySelector('#weekLinks');
 

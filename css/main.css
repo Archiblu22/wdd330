@@ -18,8 +18,28 @@ h1 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+h2 {
+    color: steelblue;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+b {
+    color:steelblue;
+    font-size: 1.2rem;
+}
+
 a, p, h2, h3, li {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+li {
+    margin-top: .5rem;
 }
 
 a#home {
