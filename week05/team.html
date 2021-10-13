@@ -6,104 +6,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Activity</title>
-    <link rel="stylesheet" href="../css/main.css">
     <style>
-        #table {
-            width: 650px;
-            height: 650px;
-            margin-left: auto;
-            margin-right: auto;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        td,
-        tr {
-            width: 33.3%;
-            height: 33.3%;
-        }
-
-        td {
-            border-right: 3px solid;
-            border-bottom: 3px solid;
-            font-size: 5em;
+        main h1 {
             text-align: center;
-        }
-
-        td:last-child {
-            border-right: 0;
-        }
-
-        tr:last-child td {
-            border-bottom: 0;
-        }
-
-        .btn {
-            display: flex;
-            margin: 2rem 0;
-            justify-content: center;
-        }
-
-        #reset {
-            border: transparent;
-            border-radius: 7px;
-            padding: .75rem 2rem;
-            background-color: red;
+            background-color: steelblue;
             color: white;
-            font-size: medium;
+            text-transform: capitalize;
+            padding: 2rem 0;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .hikeStyles {
+            padding: 0;
+            margin: 1rem 0;
+            list-style-type: none;
+        }
+
+        .hikeStyles div {
+            padding: 0 .5rem;
+        }
+
+        .hikeStyles li h2 {
+            text-align: center;
+            background-color: lightseagreen;
+            color: white;
+            padding: 1rem 0;
+            margin: .5rem 0;
+        }
+
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        li h2 {
+            width: 100%;
+            flex: 1 0 auto;
+        }
+
+        li div {
+            width: 40%;
+            margin-left: 1rem;
+            flex: 1 1 auto;
+        }
+
+        li h3 {
+            margin-bottom: 0;
+        }
+
+        li p {
+            margin-top: .3rem;
+        }
+
+        main a {
+            padding: 1rem 2rem;
         }
     </style>
 </head>
 
 <body>
-    <h1>Team Activity: Tic Tac Toe</h1>
     <main>
-
-        <table id="table">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-
-        <div class="btn">
-            <button id="reset">Reset</button>
-        </div>
-
-        <script>
-            const table = document.getElementById('table');
-            const player1 = 'X';
-            const player2 = 'O';
-            let player = player1;
-            function select(p) {
-                p.target.innerHTML = player;
-                if (player === player1) player = player2;
-                else player = player1;
-            }
-            function resetTable() {
-                for (let i = 0; i < table.rows.length; i++) {
-                    let row = table.rows[i];
-                    for (let j = 0; j < row.cells.length; j++) {
-                        row.cells[j].innerHTML = '';
-                    }
-                }
-            }
-            table.addEventListener('click', select);
-            reset.addEventListener('click', resetTable);
-        </script>
-
+        <h1>Great hikes</h1>
+        <ul id="hikes" class="hikeStyles">
+            <!-- your hike list should build here. -->
+        </ul>
         <a href="./index.html">
             << Back</a>
     </main>
+
+    <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
