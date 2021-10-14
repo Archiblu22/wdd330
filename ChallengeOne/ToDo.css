@@ -1,0 +1,130 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header {
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: steelblue;
+    color: white;
+    text-transform: uppercase;
+}
+.challengeForm {
+    width: 500px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: slategray;
+    border-radius: 3px;
+}
+.formContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+}
+.title {
+    margin-top: 0;
+    text-align: center;
+    color: white;
+}
+.taskList {
+    background-color: white;
+    border-radius: 2px;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.addedTask {
+    display: flex;
+    color: steelblue;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid slategray;
+}
+.todoTaskList {
+    text-transform: capitalize;
+}
+input.checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.taskList-btns {
+    color: red;
+    border: none;
+    background-color: white;
+    font-size: 1.2rem;
+}
+.checked {
+    text-decoration: line-through;
+}
+.taskStatus {
+    margin: 2rem 0;
+}
+.taskStatus {
+    display: flex;
+    justify-content: space-between;
+}
+#tasksLeft {
+    color: white;
+    padding-left: .5rem;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+}
+/* .filterBtn:active {
+    background:#3f729b;
+} */
+.filterBtn {
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color: steelblue;
+    padding: .2rem .4rem;
+    color: white;
+    margin: 0 .25rem;
+}
+.filterBtn:hover{
+    background:#3f729b;
+}
+.newTasks {
+    margin-top: 1rem;
+}
+.inputForm{
+    background: #fafaea;
+    padding: 10px;
+    display: flex;
+    border-radius: 3px;
+}
+input:focus-visible {
+    outline: 0;
+}
+.addTask {
+    padding-left: .5rem;
+    background: #fafaea;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    flex-grow: 1;
+}
+.addTask-btn {
+    background: #fafaea;
+    color: steelblue;
+    border: 2px solid steelblue;
+    font-size: 1.5rem;
+    padding: 0 7px;
+}
+.addTask-btn:hover{
+    background:#3f729b;
+    color: white;
+    border: 2px solid steelblue;
+}
+a {
+    padding: 1rem 2rem;
+}
