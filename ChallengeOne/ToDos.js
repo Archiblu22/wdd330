@@ -42,13 +42,13 @@ function displayTask(todoList){
         <button type="button" class="taskList-btns">X</button>
         `;
         todoTaskList.append(li);
-        counter();
     });
 }
 
 function saveLocal(todoList){
     localStorage.setItem('todoList', JSON.stringify(todoList));
     displayTask(todoList);
+    counter();
 }
 
 //delete task
@@ -75,7 +75,6 @@ todoTaskList.addEventListener('click', function(event) {
     if(event.target.classList.contains('taskList-btns')) {
         const id = event.target.parentElement.getAttribute('itemId');
         deleteTask(id);
-        counter();
     }
 });
 

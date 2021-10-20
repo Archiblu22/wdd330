@@ -114,16 +114,16 @@ input:focus-visible {
     flex-grow: 1;
 }
 .addTask-btn {
-    background: #fafaea;
-    color: steelblue;
+    background:steelblue;
+    color: white;
     border: 2px solid steelblue;
     font-size: 1.5rem;
     padding: 0 7px;
 }
 .addTask-btn:hover{
-    background:#3f729b;
+    background: #3f729b;
     color: white;
-    border: 2px solid steelblue;
+    border: 2px solid #3f729b;
 }
 a {
     padding: 1rem 2rem;
