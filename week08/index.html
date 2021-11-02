@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <h1><a href="../index.html" id="home">WDD330 Weekly Portfolio</a></h1>
+    <main>
+        <h2>Week08</h2>
+        <!-- <h3>Exercises</h3>
+        <p><a href="./team.html">Team Activity</a></p>
+        <p><a href="https://byui.zoom.us/rec/share/rqewk7K_ISgvZCbV4qF5ysg0ZnberS4h8kjKegivnNwePmb2oz2WDJyAdjkK7D7z.Gq-S6QGGGMr9E-BP">Team Activity Zoom Recording</a></p> -->
+        <h3>Notes</h3>
+        <p><b>Transforms and Transitions</b></p>
+        <ul>
+            <li>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page. We can manipulate an element’s appearance using transform functions. The value of the transform property is one or more transform functions (separated by spaces) that will be applied in the order they’re provided.</li>
+            <li>Translation functions allow you to move elements left, right, up, or down. These functions are similar to the behavior of position: relative; when declaring top and left, moving elements up and down or left and right along the x and y axes. When you employ a translation function, you’re moving elements without impacting the flow of the document. Unlike position: relative, which allows you to position an element either against its current position or against a parent or other ancestor, a translated element can only be moved relative to its current position. It moves an element x from the left, and y from the top.</li>
+            <li>The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only one value is provided, it will be used for both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio. For example, scale(1) would leave the element the same size, scale(2) would double its proportions, scale(0.5) would halve them, and so on.</li>
+            <li>The order of transform functions does matter: if you rotate before translating, your translate direction will be on the rotated axis. </li>
+            <li>Animation has certainly been possible for some time with JavaScript, but native CSS transitions generally require less client-side processing, so they’ll usually appear smoother. Transitions allow the values of CSS properties to change over time, essentially providing simple animations.</li>
+            <li>Here are the steps to create a simple transition using only CSS:<br>
+                1. Declare the original state of the element in the default style declaration.<br>
+                2. Declare the final state of your transitioned element<br>
+                3. Include the transition functions in your default style declaration using the transition properties, including: transition-property, transition-duration, transition-timing-function, and transition-delay.</li>
+            <li>The transition-duration property sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state. You can specify this either in seconds (s) or milliseconds (ms)</li>
+            <li>With transforms, transitions, and animations, our site is looking more dynamic. Remember the old maxim, though: just because you can, doesn’t mean you should. Animations were aplenty on the Web in the late 90s; a lot of us remember flashing banners and scrolling marquees, and animated gifs were less entertaining than those that are popular today. Use animations and transitions where it makes sense, enhancing the user experience—and skip it everywhere else.</li>
+        </ul>
+        <p><b>Canvas, SVG, and Drag and Drop</b></p>
+        <ul>
+            <li>Canvas was first developed by Apple. Since they already had a framework—Quartz 2D—for drawing in two-dimensional space, they went ahead and based many of the concepts of what woud come to be known as HTML5’s canvas on that framework. It was then adopted by Mozilla and Opera, and then standardized by the WHATWG (and subsequently picked up by the W3C, along with the rest of HTML5). All drawing on the canvas happens via the Canvas JavaScript API.</li>
+            <li>If we create an image programmatically using the Canvas API, but decide we’d like to have a local copy of our drawing, we can use the API’s toDataURL method to save our drawing. toDataURL creates a URL with the image in it, (either a png or jpg, whichever is specified). You can then right-click the image at this URL, and save it as a PNG or JPEG.</li>
+            <li>SVG stands for Scalable Vector Graphics, a specific file format that allows you to describe vector graphics using XML. A major selling point of vector graphics in general is that, unlike bitmap images (such as GIF, JPEG, PNG, and TIFF), vector images preserve their quality even as you blow them up or shrink them down. We can use SVG to do many of the same tasks we can do with canvas, including drawing paths, shapes, text, gradients, and patterns. </li>
+            <li>If you need to paint pixels to the screen and have no concerns about the ability to retrieve and modify your shapes, canvas is probably the better choice. If, on the other hand, you need to be able to access and change specific aspects of your graphics, SVG might be more appropriate.</li>
+        </ul>
+        <h3>Questions:</h3>
+        <ul>
+            <li>What are some common examples of sites using drag and drop? It seems like it is more of a fun game kind of thing, but I wonder what other applications you can use it to make things look more professional...</li>
+        </ul>
+
+        <a href="../index.html">
+            << Back</a>
+    </main>
+</body>
+
+</html>

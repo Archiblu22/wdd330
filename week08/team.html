@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Activity</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        main>h1 {
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+            text-transform: capitalize;
+            padding: 2rem 0;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .hikeStyles {
+            padding: 0;
+            margin: 1rem 0;
+            list-style-type: none;
+        }
+
+        .hikeStyles div {
+            padding: 0 .5rem;
+        }
+
+        .hikeStyles li>h2 {
+            text-align: center;
+            background-color: lightseagreen;
+            color: white;
+            padding: 1rem 0;
+            margin: .5rem 0;
+        }
+
+        .light {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .light>h2 {
+            width: 100%;
+            flex: 1 0 auto;
+        }
+
+        .light>div {
+            width: 40%;
+            margin-left: 1em;
+            flex: 1 1 auto;
+        }
+
+        .light h3 {
+            margin-bottom: -0.5em;
+        }
+
+        main a {
+            padding: 1rem 2rem;
+        }
+
+        button {
+            text-align: center;
+            background-color: lightseagreen;
+            color: white;
+            border: transparent;
+            padding: 0.5rem;
+            margin-left: 0.5rem;
+            border-radius: 3px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .form {
+            padding: 0.75rem;
+        }
+
+        .title h2 {
+            text-align: center;
+            background-color: steelblue;
+            margin: 0;
+            padding: .8rem 0;
+            color: white;
+        }
+
+        .form input {
+            width: 98%;
+            border: 1px solid;
+            font-size: 1.2em;
+        }
+
+        #submitComment {
+            margin-top: .8rem;
+            margin-left: 0;
+            padding: 0.5em;
+            border: 1px solid;
+        }
+
+        .comments h2 {
+            padding: 0 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Great hikes</h1>
+        <ul id="hikes" class="hikeStyles">
+            <!-- your hike list should build here. -->
+        </ul>
+        <section id="commentSection"></section>
+        <a href="./index.html">
+            << Back</a>
+    </main>
+
+    <script src="main.js" type="module"></script>
+
+</body>
+
+</html>
