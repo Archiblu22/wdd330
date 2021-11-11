@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Activity</title>
     <style>
-        html {
-            font-size: 10px;
-            background: url('./background.jpg') bottom center;
-            background-size: cover;
+        h1 {
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+            text-transform: capitalize;
+            padding: 2rem 0;
+            margin-top: 0;
         }
 
         body,
@@ -23,7 +26,7 @@
         .keys {
             display: flex;
             flex: 1;
-            min-height: 100vh;
+            min-height: 50vh;
             align-items: center;
             justify-content: center;
         }
@@ -67,6 +70,7 @@
 </head>
 
 <body>
+    <h1>Team Activity: DrumKit</h1>
     <div class="keys">
         <div data-key="65" class="key">
             <kbd>A</kbd>
@@ -120,7 +124,16 @@
         << Back</a>
 
             <script>
-
+                document.addEventListener("keydown", function (e) {
+                    const audios = document.querySelectorAll("audio");
+                    for (let number = 0; number < audios.length; number++) {
+                        console.log(audios[number].dataset.key);
+                        if (e.keyCode == audios[number].dataset.key) {
+                            var myAudio = new Audio(audios[number].src);
+                            myAudio.play();
+                        }
+                    }
+                });
             </script>
 
 </body>
