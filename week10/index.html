@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <h1><a href="../index.html" id="home">WDD330 Weekly Portfolio</a></h1>
+    <main>
+        <h2>Week10</h2>
+        <h3>Exercises</h3>
+        <!-- <p><a href="./team.html">Team Activity</a></p> -->
+        <!-- <p><a href="https://byui.zoom.us/rec/share/aGkMqs9nGTCzlk3l2OHp1Tmyu-zg89e6NsueviosqbfxEJ43zExVaNgrsFa_2FJ0.PFlaBImLAJqMp7qJ">Team Activity Zoom Recording</a></p> -->
+        <h3>Notes</h3>
+        <p><b>Client-Side Form Validation</b></p>
+        <ul>
+            <li>Client-side validation is an initial check and an important feature of good user experience; by catching invalid data on the client-side, the user can fix it straight away. If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server and then back to the client-side to tell the user to fix their data.</li>
+            <li>Form validation is when you enter data, the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application.</li>
+            <li>Validation can be done with built-in form validation or with JavaScript.</li>
+        </ul>
+        <p><b>Using Fetch</b></p>
+        <ul>
+            <li>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.</li>
+            <li>The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the ok property of the response set to false if the response isn’t in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.</li>
+            <li>The chunks that are read from a response are not broken neatly at line boundaries and are Uint8Arrays, not strings. If you want to fetch a text file and process it line by line, it is up to you to handle these complications.</li>
+        </ul>
+        <h3>Questions:</h3>
+        <ul>
+            <li>Which form of validation is most preferred: built-in or JavaScript?</li>
+        </ul>
+
+        <a href="../index.html">
+            << Back</a>
+    </main>
+</body>
+
+</html>
