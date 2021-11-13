@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Local Quakes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        h1 {
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+            text-transform: capitalize;
+            padding: 2rem 0;
+            margin-top: 0;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        fieldset {
+            text-align: center;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #demo {
+            display: none;
+        }
+
+        #quakeList {
+            max-width: 750px;
+            padding-left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin:1.5rem 0;
+        }
+
+        #quakeList li {
+            background-color: lightslategray;
+            color: white;
+            border-radius: 3px;
+            padding: .5rem;
+            list-style-type: none;
+            margin-bottom: .5rem;
+        }
+
+        button.hidden {
+            background: steelblue;
+            color: white;
+            border: 2px solid steelblue;
+            border-radius: 3px;
+            font-size: 1rem;
+            padding: 3px 7px;
+        }
+
+        button.hidden:hover {
+            background: #3f729b;
+            color: white;
+            border: 2px solid #3f729b;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Quake List</h1>
+        <fieldset>
+            <p>Start Date: <input type="date" id="startDate" value="2021-01-01"></p>
+            <p>End Date: <input type="date" id="endDate" value="2021-12-31"></p>
+            <p>Quakes Within <select id="kmRadius" name="kmRadius">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                    <option value="200">200</option>
+                </select> km</p>
+            <p id="demo"></p>
+            <ul id="quakeList"></ul>
+        </fieldset>
+    </main>
+</body>
+<script src="index.js" type="module"></script>
+<script src="Quake.js" type="module"></script>
+<script>
+    const x = document.getElementById("kmRadius").selectedIndex;
+
+    function myFunction() {
+        const x = document.getElementById("kmRadius").selectedIndex;
+        const y = document.getElementById("kmRadius").options;
+        document.getElementById("demo").innerHTML = y[x].text;
+    }
+</script>
+
+</html>
