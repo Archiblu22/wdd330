@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Local Quakes</title>
+    <title>Team Activity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         h1 {
@@ -64,12 +64,16 @@
             color: white;
             border: 2px solid #3f729b;
         }
+        
+        a {
+            padding: 3rem 2rem;
+        }
     </style>
 </head>
 
 <body>
     <main>
-        <h1>Quake List</h1>
+        <h1>Team Activity: Quake List</h1>
         <fieldset>
             <p>Start Date: <input type="date" id="startDate" value="2021-01-01"></p>
             <p>End Date: <input type="date" id="endDate" value="2021-12-31"></p>
@@ -86,6 +90,8 @@
             <ul id="quakeList"></ul>
         </fieldset>
     </main>
+    <a href="./index.html">
+        << Back</a>
 </body>
 <script src="index.js" type="module"></script>
 <script src="Quake.js" type="module"></script>
