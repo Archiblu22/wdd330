@@ -1,4 +1,4 @@
-const menuPlannerAPI = 'https://api.spoonacular.com/mealplanner/generate?apiKey=6214a0aba94c48758687d70ed6918c7d&timeFrame=day';
+const menuPlannerAPI = 'https://api.spoonacular.com/mealplanner/generate?apiKey=2d1b394733e145a9a09f32b6ce3dbf6b&timeFrame=day';
 
 fetchMealPlanner();
 
