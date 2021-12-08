@@ -1,20 +1,18 @@
 const urlParams = new URLSearchParams(window.location.search);
 
+// General Info
 const recipeId = urlParams.get('id');
 const recipeURL = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=2d1b394733e145a9a09f32b6ce3dbf6b";
 
-
-console.log(recipeId);
+//  Get Recipe Info
 fetch(recipeURL)
   .then((response) => response.json())
   .then((jsObject) => {
-    console.log(jsObject);
     const recipeContainer = document.querySelector('.recipe-container');
     recipeContainer.innerHTML = showRecipe(jsObject);
     const ingredientContainer = document.querySelector('.ingredients-list');
     const recipeTitle = document.getElementById('recipe-title');
     recipeTitle.innerHTML = jsObject.title;
-    //ingredientContainer.innerHTML = showIngreds(jsObject)
     var ingredientsList = document.createElement('ul');
     for (i = 0; i < jsObject.extendedIngredients.length; i++) {
       var list = document.createElement('li');
@@ -29,8 +27,7 @@ fetch(recipeURL)
     ingredientContainer.append(ingredientsList);
   });
 
-
-
+// Display Recipe
 function showRecipe(params) {
   return `
       <div class="recipe">

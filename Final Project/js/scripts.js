@@ -1,16 +1,7 @@
+//  API Connection
 const menuPlannerAPI = 'https://api.spoonacular.com/mealplanner/generate?apiKey=2d1b394733e145a9a09f32b6ce3dbf6b&timeFrame=day';
 
 fetchMealPlanner();
-
-function handler(e) {
-  e.preventDefault();
-  const {
-    value
-  } = document.getElementById('search');
-  if (value) {
-    window.location.href = `results.html?q=${value}`;
-  }
-}
 
 function fetchMealPlanner() {
   fetch(menuPlannerAPI)
@@ -21,9 +12,7 @@ function fetchMealPlanner() {
         );
         return;
       }
-
       response.json().then(function (data) {
-        console.log(data);
         showMenuPlan(data.meals);
       });
     })
@@ -32,6 +21,18 @@ function fetchMealPlanner() {
     });
 }
 
+// Search Bar Connection to results.html
+function handler(e) {
+  e.preventDefault();
+  const {
+    value
+  } = document.getElementById('search');
+  if (value) {
+    window.location.href = `results.html?q=${value}`;
+  }
+}
+
+// Display Featured Meal Recipes
 function showMenuPlan(data) {
   const appendCards = document.querySelector('.meals');
   data.forEach(results => {

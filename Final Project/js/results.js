@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 
+// General Info
 const myAPI = "https://api.spoonacular.com/recipes/complexSearch?apiKey=2d1b394733e145a9a09f32b6ce3dbf6b";
 
 const resultsArray = [];
@@ -9,6 +10,7 @@ const ready = callback => {
   else document.addEventListener('DOMContentLoaded', callback);
 };
 
+//  Load Results From API
 ready(function () {
   if (urlParams.has('q')) {
     fetchResults(urlParams.get('q'));
@@ -16,7 +18,6 @@ ready(function () {
 });
 
 function fetchResults(query) {
-  console.log(query);
   fetching(true);
   fetch(`${myAPI}&query=${query}&offset=${resultsArray.length}`)
     .then(function (response) {
@@ -26,8 +27,6 @@ function fetchResults(query) {
         );
         return;
       }
-
-      // Examine the text in the response
       response.json().then(function (data) {
         if (!resultsArray.length && !data.results.length) {
           showMessage();
@@ -35,7 +34,6 @@ function fetchResults(query) {
         resultsArray.push(...data.results);
         showData(data);
       });
-
       fetching(false);
     })
     .catch(function (err) {
@@ -52,10 +50,7 @@ function fetching(state) {
   }
 }
 
-function showMessage() {
-  console.log(resultsArray);
-}
-
+//  Display Results
 function showData(data) {
   if (data.results.length) {
     const appendValue = document.querySelectorAll('.results-query-name');
@@ -68,16 +63,10 @@ function showData(data) {
       }
     });
   }
-
   const appendCards = document.querySelector('.show-results');
   data.results.forEach(results => {
     appendCards.innerHTML += getCard(results);
   });
-
-  // show load more button
-  if (data.totalResults > resultsArray.length) {
-    loadMoreButton.classList.remove('hidden');
-  }
 }
 
 function getCard(params) {
